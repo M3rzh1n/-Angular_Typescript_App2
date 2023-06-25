@@ -52,14 +52,14 @@ export class MessageService {
     );
   };
 
-  // getAdminResource = (): Observable<ApiResponseModel> => {
-  //   const config: RequestConfigModel = {
-  //     url: `${env.api.serverUrl}/api/messages/admin`,
-  //     method: 'GET',
-  //     headers: {
-  //       'content-type': 'application/json',
-  //     },
-  //   };
+  getAdminResource = (): Observable<ApiResponseModel> => {
+    const config: RequestConfigModel = {
+      url: `${env.api.serverUrl}/api/messages/admin`,
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+      },
+    };
 
     return this.externalApiService.callExternalApi(config).pipe(
       mergeMap((response) => {
